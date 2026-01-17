@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            background: white;
+            text-align: center;
+            position: relative;
+
+        }
+        /* .container{
+            
+            position: absolute;
+            top: 50px;
+
+        } */
+
+        button{
+            padding: 10px;
+            margin: 12px;
+            
+        }
+        body{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Clik on start to see random colors</h1>
+    <div class="container">
+        <button id="stop">stop</button>
+    <button id="start" onclick=startPrint()>start</button>
+
+    </div>
+    
+
+</body>
+
+<script>
+
+    //genaret a random
+
+    const randomColor = ()=>{
+        const hex = "0123456789ABCDEF"
+        let color = '#'
+        for (let index = 0; index < 6; index++) {
+            color += hex[Math.floor(Math.random()*16)]
+
+            
+            
+        }
+        return color;
+    }
+    let inerval
+document.querySelector('#start').addEventListener('click',()=>{
+    function changeBgColor() {
+         document.body.style.background=randomColor();
+
+    }
+     inerval = setInterval(changeBgColor,1000)
+
+
+})
+document.querySelector('#stop').addEventListener('click',()=>{
+
+    clearInterval(inerval)
+    inerval=null;
+
+    
+
+})
+
+
+   
+   
+    
+</script>
+</html>

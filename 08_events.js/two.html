@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two</title>
+</head>
+<body>
+
+    <h1>Chai our code</h1>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+    const aaditya =function(){
+        console.log("aaitya");
+        document.querySelector('h1').innerHTML = 'Best js seris'
+        
+    }
+
+    
+    setTimeout(aaditya,2000)
+
+    // clearTimeout();
+
+    const changeme = setTimeout(function(){
+
+    },2000)
+
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearTimeout()
+    })
+</script>
+</html>

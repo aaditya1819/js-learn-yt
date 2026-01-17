@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai our code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langname){
+       const li=  document.createElement('li');
+       li.innerHTML= `${langname}`
+       document.querySelector('.language').appendChild(li)
+
+    }
+
+    addLanguage('Python')
+    addLanguage('TypeScript')
+
+
+    function addOptiLnaguage(langName) {
+        const li =document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+        
+    }
+    addOptiLnaguage('golang')
+
+    //edit
+
+    let secondLang =document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML = "Mojo"
+    const newlI =document.createElement('li')
+    newlI.textContent="mojo"
+    secondLang.replaceWith(newlI)
+
+    //edit
+     const firstdLang = document.querySelector('li:nth-child(1)') 
+    firstdLang.outerHTML='<li>TypeScript</li>'
+
+    //remove
+
+    const lastlangauge =document.querySelector('li:last-child')
+    lastlangauge.remove()
+</script>  
+</html>

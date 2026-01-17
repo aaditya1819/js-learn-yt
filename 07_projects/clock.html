@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Local Time</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f0f0f, #2a2a2a);
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      text-align: center;
+    }
+
+    .title {
+      color: #ffffff;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .time-box {
+      background-color: #fbbf24; /* yellow */
+      color: #000;
+      padding: 8px 28px;
+      border-radius: 999px; /* pill shape */
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="title">Your local time</div>
+    <div class="time-box">--:--</div>
+  </div>
+</body>
+<script src="clock.js"></script>
+</html>

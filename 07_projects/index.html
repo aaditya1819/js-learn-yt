@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Scheme Switcher</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Top buttons */
+        .top-buttons {
+            margin: 10px;
+        }
+
+        .top-buttons button {
+            padding: 6px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        /* Color boxes container */
+        .colors {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .color-box {
+            width: 80px;
+            height: 80px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        .grey {
+            background-color: grey;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .yellow {
+            background-color: yellow;
+            width: 80px;
+            height: 80px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-buttons">
+        <button>Home</button>
+        <button>Youtube channel</button>
+    </div>
+
+    <h2>Color Scheme Switcher</h2>
+
+    <div class="colors">
+        <div class="color-box grey" ></div>
+        <div class="color-box white"></div>
+        <div class="color-box blue" ></div>
+    </div>
+
+    <div class="yellow-container">
+        <div class="color-box yellow" onclick="changeColor('yellow')"></div>
+    </div>
+
+    <p>
+        Try clicking on one of the colors<br>
+        above to change the background<br>
+        color of this page!
+    </p>
+
+    <script src="chaiourcode.js"></script>
+        
+    
+
+</body>
+</html>
